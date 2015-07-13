@@ -3,7 +3,7 @@ var aws = require('aws-sdk'),
     lambdaConfig = require('../lambdaConfig'),
     pkgConfig = require('../package');
 
-var lambda  = new aws.Lambda({region: lambdaConfig.region}),
+var lambda  = new aws.Lambda({apiVersion:'2014-11-11',region: lambdaConfig.region}),
     zipPath = 'pkg/' + pkgConfig.name + '.zip';
 
 var params = {
