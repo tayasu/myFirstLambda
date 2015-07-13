@@ -24,5 +24,11 @@ lambda.uploadFunction(params, function(err, data) {
 
 
 function buildHnadlerName(lambdaConfig){
+  if(!lambdaConfig.handlerFile){
+            lambdaConfig.handlerFile = 'app';
+  }
+  if(!lambdaConfig.handlerMethod){
+    lambdaConfig.handlerMethod = 'handler'
+  }
   return lambdaConfig.handlerFile + '.' + lambdaConfig.handlerMethod;
 }

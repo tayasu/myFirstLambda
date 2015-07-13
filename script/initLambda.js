@@ -4,6 +4,8 @@ var config = {
   description: '',
   role: '',
   memorySize: '128',
-  timeout: '3'
+  timeout: '3',
+  handlerFile:'',
+  handlerMethod:''
 };
 fs.writeFileSync('./lambdaConfig.json',JSON.stringify(config));
