@@ -46,10 +46,13 @@ var context = {
 };
 
 describe('myFirstLambda',function(){
-    it('Should have event as a property', function(){
+    it('Should have event as a property', function(done) {
         var lambda = require("../app");
-        lambda.handler(data,context);
-        assert(lambda.event);
-        assert.deepEqual(data,lambda.event);
+        lambda.handler(data, context, (err, message) => {
+            console.log(message);
+            assert(lambda.event);
+            assert.deepEqual(data, lambda.event);
+            done();
+        });
     });
 });

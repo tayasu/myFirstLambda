@@ -3,9 +3,10 @@
 
 "use strict";
 
-exports.handler = function(event, context){
+exports.handler = function(event, context, callback) {
     var self = this;
+    self.event = event;
     console.log('lambda fired');
     console.log('event: ' + JSON.stringify(event, null, 4));
-    context.done();
+    callback(null, 'lambda callback');
 };

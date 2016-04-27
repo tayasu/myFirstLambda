@@ -2,11 +2,11 @@
   "name": "myFirstLambda",
   "version": "0.0.1",
   "private": true,
-  "engines" : { "node" : "0.10.32" },
+  "engines" : { "node" : "4.3" },
   "main": "app.js",
   "dependencies": {},
   "devDependencies": {
-    "aws-sdk":"2.1.*",
+    "aws-sdk":"2.2.*",
     "mocha": "*",
     "eslint": "*",
     "istanbul": "*"
